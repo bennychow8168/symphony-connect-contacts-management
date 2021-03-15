@@ -1,0 +1,5 @@
+ExternalNetwork,ContactAction,ContactFirstName,ContactLastName,ContactCompany,ContactEmail,ContactPhone,AdvisorEmailList
+WHATSAPP,ADD,John,Doe,Acme Pte Ltd,john.doe@gmail.com,+6598984545,john.smith@symphony.com~mike.smith@symphony.com
+WHATSAPP,UPDATE,John,Doe,Acme Pte Ltd,john.doe@gmail.com,+6598984545,john.smith@symphony.com~mike.smith@symphony.com
+WHATSAPP,DELETE,John,Doe,Acme Pte Ltd,john.doe@gmail.com,+6598984545,john.smith@symphony.com~mike.smith@symphony.com
+WECHAT,ADD,John,Doe,Acme Pte Ltd,john.doe@gmail.com,+6598984545,john.smith@symphony.com~mike.smith@symphony.com

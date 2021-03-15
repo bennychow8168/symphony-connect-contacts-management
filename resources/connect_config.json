@@ -1,0 +1,13 @@
+{
+  "wechat_apiURL": "wcgw-uat.symphony.com/wechatgateway",
+  "whatsapp_apiURL": "connect.uat.symphony.com/admin",
+  "privateKeyPath":"./rsa/",
+  "privateKeyName": "connect-privateKey.pem",
+  "wechat_publicKeyId": "develop2-uat",
+  "whatsapp_publicKeyId": "develop2-uat",
+  "podId": "5119",
+  "proxyURL": "",
+  "proxyUsername": "",
+  "proxyPassword": "",
+  "truststorePath": ""
+}
