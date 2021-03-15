@@ -24,11 +24,11 @@ The script expects an input CSV file at the top directory where the script runs 
 The CSV file will contain following columns:
 - ExternalNetwork (``WECHAT`` / ``WHATSAPP``)
 - ContactAction (``ADD`` / ``UPDATE`` / ``DELETE``)
-- ContactFirstName
-- ContactLastName
-- ContactCompany
-- ContactEmail
-- ContactPhone
+- ContactFirstName (Mandatory for ``ADD`` / ``Update``)
+- ContactLastName (Mandatory for ``ADD`` / ``Update``)
+- ContactCompany (Mandatory for ``ADD`` / ``Update``)
+- ContactEmail (Mandatory for all action types)
+- ContactPhone (Mandatory for ``ADD`` / ``Update``, format should include international code with + sign in front - e.g +6598984545)
 - AdvisorEmailList (List of Symphony Users / advisors who will connect with this contact - multiple emails possible - separated by ``~``)
 
 Example input CSV file
@@ -46,6 +46,12 @@ The output file will be saved in the same directory as the input file with filen
 Columns will be same as Input CSV above, with additional of **Status** column.
 
 Successful entries will be marked with status = OK. Otherwise, error / more info will be displayed
+
+Example output CSV file
+
+    ExternalNetwork,ContactAction,ContactFirstName,ContactLastName,ContactCompany,ContactEmail,ContactPhone,AdvisorEmailList,Status
+    WHATSAPP,DELETE,John,Doe,Acme Pte Ltd,john.doe@gmail.com,+6598984545,chung.yeoh@symphony.com,chung.yeoh@symphony.com - OK - [] 
+    WHATSAPP,ADD,John,Doe,Acme Pte Ltd,john.doe@gmail.com,+6598984545,chung.yeoh@symphony.com,OK - Contact added successfully
 
 
 ## Environment Setup
@@ -105,7 +111,7 @@ Sample:
 
 
 
-### 5 - Run script
+### 4 - Run script
 The script can be executed by running
 ``python3 main.py`` 
 

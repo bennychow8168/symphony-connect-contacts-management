@@ -79,7 +79,10 @@ def main():
                 print(f"Add Contact {result_record['contact_email']} for {advisor_email_list}")
                 try:
                     status, result = connect_client.add_contact(result_record['external_network'], result_record['first_name'], result_record['last_name'], result_record['contact_email'], result_record['phone'], result_record['company'], advisor_email_list)
-                    result_record['result'] = f'{status} - {result} '
+                    if status == 'OK':
+                        result_record['result'] = f'{status} - Contact added successfully'
+                    else:
+                        result_record['result'] = f'{status} - {result} '
 
                 except Exception as ex:
                     exInfo = sys.exc_info()
